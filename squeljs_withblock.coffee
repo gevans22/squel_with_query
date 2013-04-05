@@ -15,7 +15,7 @@ class cls.WithBlock extends cls.Block
   buildStr: (queryBuilder) ->
     withs = ""
     if 0 < @withs.length
-      for withloop in @withs
+      for f in @withs
         withs +=  ", " if "" isnt withs
         withs += " \"#{f.alias}\" AS "
         withs += "(" + f.query + ") "
